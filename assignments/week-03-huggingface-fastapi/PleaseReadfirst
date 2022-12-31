@@ -1,0 +1,10 @@
+The assignment includes:
+in week-03-huggingface-fastapi folder
+    hugging_face_tutorial.ipynb --> notebook of preparation
+    hugging_face_tutorial.html  --> notebook in html format
+in week-03-huggingface-fastapi 
+                fast_api_tutorial folder
+                    app.py up to 1.6 
+ 
+
+1 question: where does "translation_en_to_fr" as the first argument of the pipeline comes from?
