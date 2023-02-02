@@ -12,7 +12,8 @@ st.image(img_fuel, width=700)
 st.markdown("<h1 style='text-align: center; color: black;'>Fuel Efficiency</h1>", unsafe_allow_html=True)
 
 # Import train dataset to DataFrame
-train_df = pd.read_csv("../dat/train.csv.gz", compression="gzip")
+# changed 1/31/2023 train_df = pd.read_csv("../dat/train.csv.gz", compression="gzip")
+train_df = pd.read_csv("../dat/train.csv")
 model_results_df = pd.read_csv("../dat/model_results.csv")
 
 # Create sidebar for user selection
@@ -23,7 +24,7 @@ with st.sidebar:
     # Available models for selection
 
     # YOUR CODE GOES HERE!
-    models = ["DNN", "TPOT"]
+    models = ["linear_model", "dnn_model","ExtraTree"]
 
     # Add model select boxes
     model1_select = st.selectbox(
@@ -60,20 +61,74 @@ with tab1:
 with tab2:    
     
     # YOUR CODE GOES HERE!
-
+    cols = ["mae"]
+    model1_results = model_results_df[model_results_df["model"] == model1_select]
+    cm1  = model1_results[cols].to_numpy()[0].tolist()
+    z1 = cm1
     # Columns for side-by-side model comparison
     col1, col2 = st.columns(2)
 
     # Build the confusion matrix for the first model.
     with col1:
         st.header(model1_select)
-
+        fig1 = px.imshow(z1, text_auto=True)
         # YOUR CODE GOES HERE!
+        
+        # add custom x-axis title
+        fig1.add_annotation(dict(font=dict(color="black",size=14),
+                                x=0.5,
+                                y=-0.00005,
+                                showarrow=False,
+                                text="Predicted value",
+                                xref="paper",
+                                yref="paper"))
 
+        # add custom y-axis title
+        fig1.add_annotation(dict(font=dict(color="black",size=14),
+                                x=-0.25,
+                                y=0.5,
+                                showarrow=False,
+                                text="True value",
+                                textangle=-90,
+                                xref="paper",
+                                yref="paper"))
+
+
+        # Write plotly chart and fit to the container width.
+        st.plotly_chart(fig1, use_container_width=True)
 
     # Build confusion matrix for second model
     with col2:
         st.header(model2_select)
+        model2_results = model_results_df[model_results_df["model"] == model2_select]
+        cm2  = model2_results[cols].to_numpy()[0].tolist()
+
+
+        z2 = cm2
+        z_text2 = [[str(y) for y in x] for x in z2]
+
+        st.header(model2_select)
+
+        fig2 = px.imshow(z2, text_auto=True)
+        
+        # add custom x-axis title
+        fig2.add_annotation(dict(font=dict(color="black",size=14),
+                                x=0.5,
+                                y=-0.00005,
+                                showarrow=False,
+                                text="Predicted value",
+                                xref="paper",
+                                yref="paper"))
+
+        # add custom y-axis title
+        fig2.add_annotation(dict(font=dict(color="black",size=14),
+                                x=-0.25,
+                                y=0.5,
+                                showarrow=False,
+                                text="True value",
+                                textangle=-90,
+                                xref="paper",
+                                yref="paper"))
 
         # YOUR CODE GOES HERE!
 

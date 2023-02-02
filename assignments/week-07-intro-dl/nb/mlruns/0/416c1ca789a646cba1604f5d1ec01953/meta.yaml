@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/Gilles/Documents/GitHub/week-07-intro-dl/nb/mlruns/0/416c1ca789a646cba1604f5d1ec01953/artifacts
+end_time: 1675214105756
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 416c1ca789a646cba1604f5d1ec01953
+run_name: glamorous-wolf-723
+run_uuid: 416c1ca789a646cba1604f5d1ec01953
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675214095037
+status: 3
+tags: []
+user_id: Gilles

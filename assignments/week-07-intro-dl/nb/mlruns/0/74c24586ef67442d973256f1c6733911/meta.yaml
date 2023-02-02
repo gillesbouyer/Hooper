@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/Gilles/Documents/GitHub/week-07-intro-dl/nb/mlruns/0/74c24586ef67442d973256f1c6733911/artifacts
+end_time: 1675214914366
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 74c24586ef67442d973256f1c6733911
+run_name: rebellious-skink-608
+run_uuid: 74c24586ef67442d973256f1c6733911
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675214905270
+status: 3
+tags: []
+user_id: Gilles

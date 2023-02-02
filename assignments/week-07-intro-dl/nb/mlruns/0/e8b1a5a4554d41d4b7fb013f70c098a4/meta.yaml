@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/Gilles/Documents/GitHub/week-07-intro-dl/nb/mlruns/0/e8b1a5a4554d41d4b7fb013f70c098a4/artifacts
+end_time: 1675009009877
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e8b1a5a4554d41d4b7fb013f70c098a4
+run_name: mercurial-hare-193
+run_uuid: e8b1a5a4554d41d4b7fb013f70c098a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675008943198
+status: 3
+tags: []
+user_id: Gilles

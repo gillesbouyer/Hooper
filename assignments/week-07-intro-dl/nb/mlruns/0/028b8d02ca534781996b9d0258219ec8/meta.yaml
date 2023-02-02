@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/Gilles/Documents/GitHub/week-07-intro-dl/nb/mlruns/0/028b8d02ca534781996b9d0258219ec8/artifacts
+end_time: 1675217150872
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 028b8d02ca534781996b9d0258219ec8
+run_name: big-calf-905
+run_uuid: 028b8d02ca534781996b9d0258219ec8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1675217142792
+status: 3
+tags: []
+user_id: Gilles
