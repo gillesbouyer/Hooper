@@ -30,6 +30,8 @@ with st.sidebar:
         "Choose Model 1:",
         ("Logistic Regression", "SVM", "Gradient Boosting Classifier")
     )
+
+    
     
     # Remove selected model 1 from model list
     # App refreshes with every selection change.
