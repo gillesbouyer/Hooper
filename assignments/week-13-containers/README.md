@@ -38,8 +38,6 @@ NOTE You should be in `stock_predictor` conda environment.
     ``` docker --version ```
 
     If you see something like `Docker version 20.10.13, build a224086`, you have successfully installed Docker.
-    
-    If you see an error relating to permissions - please follow [these steps](https://docs.docker.com/engine/install/linux-postinstall/)!
 
 3. Create a `.dockerignore` file in your project directory. 
 Make sure that the `.dockerignore` file is in the root directory. 
@@ -56,8 +54,6 @@ Here is a sample directory structure:
      width="200px"
      height="auto"/>
 </p>
-
-5. Make sure you uncomment the `ping` end-point in your `main.py`!
 
 ## Task 2: Dockerfile
 
@@ -135,14 +131,8 @@ Note that the second command requires `vim`.
     ```
     COPY src/ .
     ```
-    
-8. We'll expose port 8000 with the following text:
 
-	```docker
-	EXPOSE 8000
-	```
-
-9. Lastly, set the command to run the `uvicorn` server.
+8. Lastly, set the command to run the `uvicorn` server.
 
     `CMD` takes a list of strings, each of these strings is what you would type in the command line separated by spaces.
 
@@ -226,7 +216,7 @@ Note that the second command requires `vim`.
 3. Start the container
 
     ```
-    docker run -d --rm --name mycontainer -p 8000:8000 stock-prophet
+    docker run -d --name mycontainer -p 8000:8000 stock-prophet
     ```
 
 4. Verify that the container is running:
